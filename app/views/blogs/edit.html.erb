@@ -1,2 +1,12 @@
-<h1>Blogs#edit</h1>
-<p>Find me in app/views/blogs/edit.html.erb</p>
+<h1>編集</h1>
+<%= form_with model: @blog, local: true do |f|  %>
+  <div class="form-inline">
+  <h4>タイトル</h4>
+  <%= f.text_field :title, class: "form-control" %>
+  <h4>カテゴリー</h4>
+  <%= f.text_field :category, class: "form-control" %>
+  <h4>本文</h4></h4>
+  <%= f.text_area :body, class: "form-control" %>
+  <%= f.submit "保存", class: "btn btn-default" %>
+  </div>
+<% end %>
